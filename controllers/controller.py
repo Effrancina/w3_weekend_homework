@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from app import app
-from models.library_books import books_list, add_new_book
+from models.library_books import books_list, add_new_book, remove_book
 # remember to add other functions here
 from models.book import Book
 
@@ -17,4 +17,7 @@ def add_book():
     add_new_book(newbook)
     return redirect('/books')
 
-# add functions!
+@app.route('/books/delete/<title>', methods=['POST'])
+def remove(title):
+  remove_book(title)
+  return redirect('/books')
