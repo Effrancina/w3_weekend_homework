@@ -12,7 +12,7 @@
         <label for="genre">Genre</label>
         <input type="text" name="genre" id="genre">
        
-        <input type="submit" value="Add book">
+        <input class="button1" type="submit" value="Add book">
     </form>
     <div class="book-container">
     <br>
@@ -25,7 +25,7 @@
         <br>
         <div>
             <form class="form-inline" action="/books/delete/{{ book.title }}" method="post">
-            <input type="submit" value="Remove book">
+            <input class="button1" type="submit" value="Remove book">
             </form>
         </div> 
     {% endfor %}  

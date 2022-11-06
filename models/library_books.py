@@ -18,4 +18,7 @@ def remove_book(title):
         if book.title == title:
             book_to_delete = book
             break
+        elif book.title == None:
+            book_to_delete = None
+            break
     books_list.remove(book_to_delete)
